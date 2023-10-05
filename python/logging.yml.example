@@ -4,7 +4,7 @@ handlers:
     file:
         class: logging.handlers.WatchedFileHandler
         # Change the path to your liking
-        filename: /home/alexandre/.lifeboat/logs/lifeboat.log
+        filename: /home/yourname/.myproject/logs/runtime.log
         formatter: lineFormatter
         level: INFO
     console:
@@ -16,7 +16,7 @@ root:
     level: DEBUG
     handlers:
         - console
-        # - line
+        # - file
 
 formatters:
     lineFormatter:
