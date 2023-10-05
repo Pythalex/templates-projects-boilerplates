@@ -17,7 +17,7 @@ handlers:
     file:
         class: logging.handlers.WatchedFileHandler
         # Change the path to your liking
-        filename: /home/alexandre/.lifeboat/logs/lifeboat.log
+        filename: /home/yourname/.myproject/logs/runtime.log
 ```
 
 If you just want to run it:
@@ -29,11 +29,13 @@ If you want to dev/contribute:
 `pip install ".[dev]"`
 
 
-# Format
+# See available make commands
 
-`make format`
+`make help`
 
-
-# Run
-
-`python lifeboat/main.py [ACTION]`
+```
+format              Format the project codebase and fix linter issues 
+install             Install dependencies required to run the project 
+install-dev         Install dependencies + dev dependencies 
+lint                Run project linter 
+```
