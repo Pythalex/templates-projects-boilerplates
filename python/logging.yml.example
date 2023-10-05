@@ -1,0 +1,25 @@
+version: 1
+
+handlers:
+    file:
+        class: logging.handlers.WatchedFileHandler
+        # Change the path to your liking
+        filename: /home/alexandre/.lifeboat/logs/lifeboat.log
+        formatter: lineFormatter
+        level: INFO
+    console:
+        class: logging.StreamHandler
+        formatter: lineFormatter
+        level: DEBUG
+
+root:
+    level: DEBUG
+    handlers:
+        - console
+        # - line
+
+formatters:
+    lineFormatter:
+        format: "%(asctime)s:%(levelname)s:%(name)s:%(funcName)s %(message)s"
+
+disable_existing_loggers: true

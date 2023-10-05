@@ -1,0 +1,35 @@
+[project]
+name="myproject"
+version="0.0.1"
+description="Change me"
+requires-python=">=3.9.7"
+
+
+dependencies = [
+	"typer[all]",
+	"pandas",
+	"pyproject-parser",
+	"pydantic",
+	"pyyaml",
+]
+
+[project.optional-dependencies]
+dev = [
+	"black",
+	"isort",
+	"ipdb",
+	"pytest",
+	"ruff",
+]
+
+[tool.black]
+line-length=79
+
+[tool.isort]
+profile = "black"
+
+[tool.config]
+configuration="hello"
+config-with-dashes="hello world"
+optional-config-int=1
+config-with-user-expand="~/.myproject/logs"
